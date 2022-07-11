@@ -1,9 +1,19 @@
-import React from 'react'
-
-export default function LocaleProvider() {
+import React, { useState } from 'react'
+import LocaleContext from './LocaleContext'
+import Lang from '../lang'
+export default function LocaleProvider({ children }) {
+  const [lang, setLang] = useState("en")
+  const useCode = key => {
+    return Lang[lang][key] || ''
+  }
+  const value = {
+    lang,
+    setLang,
+    useCode
+  }
   return (
-    <div>
-      LocaleProvider
-    </div>
+    <LocaleContext.Provider value={value}>
+      {children}
+    </LocaleContext.Provider>
   )
 }

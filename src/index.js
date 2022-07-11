@@ -4,14 +4,22 @@ import './index.css';
 import App from './App';
 import LocaleProvider from './contexts/LocaleProvider'
 import ReduxProvider from './contexts/ReduxProvider'
-import LocaleProvider from './contexts/LocaleProvider'
+import CdnProvider from './contexts/CdnProvider'
+import SocketProvider from './contexts/SocketProvider'
+import NetworkProvider from './contexts/NetworkProvider'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LocaleProvider>
-      <ReduxProvider>
-        <App />
-      </ReduxProvider>
-    </LocaleProvider>
+    <ReduxProvider>
+      <NetworkProvider>
+        <LocaleProvider>
+          <SocketProvider>
+            <CdnProvider>
+              <App />
+            </CdnProvider>
+          </SocketProvider>
+        </LocaleProvider>
+      </NetworkProvider>
+    </ReduxProvider>
   </React.StrictMode>
 );
