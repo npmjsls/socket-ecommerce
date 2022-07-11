@@ -10,10 +10,7 @@ const users = new mongoose.model("users", new mongoose.Schem({
 }))
 const products = new mongoose.model("products", new mongoose.Schem({
     title: String,
-    old: Number,
-    new: Number,
-    rating: Number,
-    discount: Number,
+    price: Number,
     tags: String,
     image: String,
 }))

@@ -40,8 +40,6 @@ const _auth = (socket, token) => {
     })
 }
 
-
-
 module.exports = {
     _tags,
     _login,

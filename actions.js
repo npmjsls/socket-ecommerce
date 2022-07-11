@@ -23,5 +23,8 @@ exports.perFormedprofile = "OnDoneprofile"
 exports.perFormedcartAction = "OnDonecartAction"
 exports.perFormedcartAction = "OnDonecartAction"
 exports.perFormedremovedFromCart = "OnDoneremovedFromCart"
+exports.perFormedProductsUpload = "OnProductsUpload"
 exports.perFormedupdatedCart = "OnDoneupdatedCart"
 exports.perFormedLoggedOut = "OnDoneLoggedOut"
+
+
