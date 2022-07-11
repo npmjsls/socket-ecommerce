@@ -7,7 +7,7 @@ const actions = require("./actions")
 const app = express()
 const server = createServer(app)
 
-const io = Server(server, {
+const io = new Server(server, {
     cors: {
         origin: "http://localhost:3000",
         methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"]
